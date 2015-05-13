@@ -8,7 +8,8 @@ app.use(express.static(__dirname + '/public'))
 app.get('/', function(request, response) {
 	fs.readFileSync('/index.html', function (err,data) {
 		if (err) throw err;
-		response.send(data.toString());
+		//response.send(data.toString());
+		response.send('data.toString()');
 		
 	});
 })
